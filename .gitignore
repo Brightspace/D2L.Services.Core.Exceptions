@@ -1,0 +1,6 @@
+bin
+obj
+*~
+*.nupkg
+NuGet.exe
+publish-*.bat

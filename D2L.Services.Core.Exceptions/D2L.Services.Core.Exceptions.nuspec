@@ -1,0 +1,14 @@
+﻿<?xml version="1.0"?>
+<package>
+	<metadata>
+		<id>D2L.Services.Core.Exceptions</id>
+		<title>D2L.Services.Core.Exceptions</title>
+		<version>0.0.0</version> <!-- Version number is overridden in BuildNuGetPackage script -->
+		<authors>Desire2Learn</authors>
+		<owners>Desire2Learn</owners>
+		<projectUrl>https://git.dev.d2l/projects/D2LSER/repos/d2l.services.core.exceptions</projectUrl>
+		<requireLicenseAcceptance>false</requireLicenseAcceptance>
+		<description>An abstract exception class that represents an error that occurred while communicating with a service. Provides a consistent way to catch service related errors.</description>
+		<copyright>Copyright © Desire2Learn 2015</copyright>
+	</metadata>
+</package>
