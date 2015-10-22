@@ -1,7 +1,13 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# SharpDevelop 5.1
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30723.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2L.Services.Core.Exceptions", "D2L.Services.Core.Exceptions\D2L.Services.Core.Exceptions.csproj", "{1AAED9BE-54AB-4FCE-B837-2A13D94A95A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D2L.Services.Core.Exceptions.UnitTests", "D2L.Services.Core.Exceptions.UnitTests\D2L.Services.Core.Exceptions.UnitTests.csproj", "{7A396C30-791C-4624-A643-2EACF1FF2E74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{907E047F-DA4F-43F9-8571-58CCFFA178C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +19,15 @@ Global
 		{1AAED9BE-54AB-4FCE-B837-2A13D94A95A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AAED9BE-54AB-4FCE-B837-2A13D94A95A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AAED9BE-54AB-4FCE-B837-2A13D94A95A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A396C30-791C-4624-A643-2EACF1FF2E74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A396C30-791C-4624-A643-2EACF1FF2E74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A396C30-791C-4624-A643-2EACF1FF2E74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A396C30-791C-4624-A643-2EACF1FF2E74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A396C30-791C-4624-A643-2EACF1FF2E74} = {907E047F-DA4F-43F9-8571-58CCFFA178C1}
 	EndGlobalSection
 EndGlobal
