@@ -8,3 +8,5 @@ packages/*
 *.suo
 *.DotSettings.user
 build/*
+packages/*
+*.suo
