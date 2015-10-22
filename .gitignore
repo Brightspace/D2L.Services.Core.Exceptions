@@ -7,3 +7,4 @@ publish-*.bat
 packages/*
 *.suo
 *.DotSettings.user
+build/*

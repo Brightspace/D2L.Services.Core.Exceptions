@@ -26,7 +26,7 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsNotAsErrors>1591,1030</WarningsNotAsErrors>
-	<DocumentationFile>bin\Debug\D2L.Services.Core.Exceptions.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug\D2L.Services.Core.Exceptions.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <OutputPath>bin\Release\</OutputPath>
@@ -38,7 +38,13 @@
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
     <WarningsNotAsErrors>1591,1030</WarningsNotAsErrors>
-	<DocumentationFile>bin\Release\D2L.Services.Core.Exceptions.xml</DocumentationFile>
+    <DocumentationFile>bin\Release\D2L.Services.Core.Exceptions.xml</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>..\build\output\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>..\build\output\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
