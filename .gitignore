@@ -5,8 +5,6 @@ obj
 NuGet.exe
 publish-*.bat
 packages/*
-*.suo
 *.DotSettings.user
 build/*
-packages/*
 *.suo
