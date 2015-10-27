@@ -4,3 +4,6 @@ obj
 *.nupkg
 NuGet.exe
 publish-*.bat
+packages/*
+*.suo
+*.DotSettings.user
