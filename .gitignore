@@ -7,4 +7,6 @@ publish-*.bat
 packages/*
 *.DotSettings.user
 build/*
+Debug
+Release
 *.suo
