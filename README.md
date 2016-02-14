@@ -1,6 +1,8 @@
 # D2L.Services.Core.Exceptions
 
-Common exception types for D2L
+[![Build status](https://ci.appveyor.com/api/projects/status/tl4kxbapn4bafmkr/branch/master?svg=true)](https://ci.appveyor.com/project/Brightspace/d2l-services-core-exceptions/branch/master)
+
+Common exception types for D2L.
 
 ## Contributing
 
