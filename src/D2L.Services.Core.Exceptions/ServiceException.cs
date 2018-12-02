@@ -1,5 +1,5 @@
-﻿using System.Net;
-using System;
+﻿using System;
+using System.Net;
 
 namespace D2L.Services.Core.Exceptions {
 	/// <summary>
@@ -7,11 +7,11 @@ namespace D2L.Services.Core.Exceptions {
 	/// an error caused by the service's response.
 	/// </summary>
 	public abstract class ServiceException : Exception {
-		
-		private ServiceErrorType m_errorType;
-		private HttpStatusCode m_serviceStatusCode;
-		private HttpStatusCode m_proposedStatusCode;
-		
+
+		private readonly ServiceErrorType m_errorType;
+		private readonly HttpStatusCode m_serviceStatusCode;
+		private readonly HttpStatusCode m_proposedStatusCode;
+
 		/// <summary>
 		/// Initialize the properties of <c>ServiceException</c> using the
 		/// provided values.
@@ -45,7 +45,7 @@ namespace D2L.Services.Core.Exceptions {
 			Exception innerException = null,
 			HttpStatusCode serviceStatusCode = default( HttpStatusCode )
 		) : base( message, innerException ) {
-			
+
 			if(
 				errorType == ServiceErrorType.ErrorResponse &&
 				serviceStatusCode == default( HttpStatusCode )
@@ -53,16 +53,16 @@ namespace D2L.Services.Core.Exceptions {
 				throw new ArgumentException(
 					"You must supply a value for the serviceStatusCode " +
 					"parameter when errorType is ErrorResponse.",
-					
+
 					"serviceStatusCode"
 				);
 			}
-			
+
 			m_errorType = errorType;
 			m_proposedStatusCode = proposedStatusCode;
 			m_serviceStatusCode = serviceStatusCode;
 		}
-		
+
 		/// <summary>
 		/// Initialize the properties of <c>ServiceException</c> using the
 		/// provided values.
@@ -95,7 +95,7 @@ namespace D2L.Services.Core.Exceptions {
 			Exception innerException = null,
 			HttpStatusCode serviceStatusCode = default( HttpStatusCode )
 		) : base( message, innerException ) {
-			
+
 			if(
 				errorType == ServiceErrorType.ErrorResponse &&
 				serviceStatusCode == default( HttpStatusCode )
@@ -103,14 +103,14 @@ namespace D2L.Services.Core.Exceptions {
 				throw new ArgumentException(
 					"You must supply a value for the serviceStatusCode " +
 					"parameter when errorType is ErrorResponse.",
-					
+
 					"serviceStatusCode"
 				);
 			}
-			
+
 			m_errorType = errorType;
 			m_serviceStatusCode = serviceStatusCode;
-			
+
 			switch( errorType ) {
 				case ServiceErrorType.ConnectionFailure:
 				case ServiceErrorType.ClientError:
@@ -124,7 +124,7 @@ namespace D2L.Services.Core.Exceptions {
 					break;
 				case ServiceErrorType.ErrorResponse:
 					if(
-						(int)serviceStatusCode >= 400 &&
+						( int )serviceStatusCode >= 400 &&
 						serviceStatusCode != HttpStatusCode.InternalServerError
 					) {
 						m_proposedStatusCode = serviceStatusCode;
@@ -137,28 +137,28 @@ namespace D2L.Services.Core.Exceptions {
 					break;
 			}
 		}
-		
+
 		/// <summary>The name of the service being contacted.</summary>
 		public abstract string ServiceName { get; }
-		
+
 		/// <summary>The type of error that resulted in this exception.
 		/// </summary>
 		/// <seealso cref="D2L.Services.Core.Exceptions.ServiceErrorType" />
 		public ServiceErrorType ErrorType { get { return m_errorType; } }
-		
+
 		/// <summary>The suggested status code for the consumer to respond with.
 		/// If this exception is uncaught, the consumer should use this status
 		/// code instead of 500 Internal Server Error.</summary>
 		public HttpStatusCode ProposedStatusCode {
 			get { return m_proposedStatusCode; }
 		}
-		
+
 		/// <summary>The status code received from the service. This value is
 		/// only meaningful when <c>ErrorType</c> is <c>ErrorResponse</c>.
 		/// </summary>
 		public HttpStatusCode ServiceStatusCode {
 			get { return m_serviceStatusCode; }
 		}
-		
+
 	}
 }
