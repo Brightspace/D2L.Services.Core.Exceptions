@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Net;
 using D2L.Services.Core.Exceptions.TestUtilities;
 using NUnit.Framework;
 
 namespace D2L.Services.Core.Exceptions {
 	[TestFixture]
-    public class ServiceExceptionTests {
+	public class ServiceExceptionTests {
 		[Test]
 		public void ServiceException_UnknownErrorType_Proposes500() {
 			ServiceException exception = new StubServiceException(
-				errorType: ( ServiceErrorType )(-123)
+				errorType: ( ServiceErrorType )( -123 )
 			);
 
 			Assert.AreEqual( HttpStatusCode.InternalServerError, exception.ProposedStatusCode );
@@ -48,5 +43,5 @@ namespace D2L.Services.Core.Exceptions {
 
 			Assert.AreEqual( HttpStatusCode.BadGateway, exception.ProposedStatusCode );
 		}
-    }
+	}
 }

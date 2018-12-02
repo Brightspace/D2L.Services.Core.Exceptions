@@ -1,5 +1,5 @@
 ﻿namespace D2L.Services.Core.Exceptions {
-	
+
 	/// <summary>
 	/// Indicates the reason that a
 	/// <see cref="D2L.Services.Core.Exceptions.ServiceException">Service
@@ -13,12 +13,12 @@
 		/// <example>The connection was refused by the server.</example>
 		/// </summary>
 		ConnectionFailure,
-		
+
 		/// <summary>
 		/// The connection to the service timed out.
 		/// </summary>
 		Timeout,
-		
+
 		/// <summary>
 		/// The service did not respond with a status code indicating success
 		/// <example>The service responded with 403 Forbidden</example>
@@ -26,7 +26,7 @@
 		/// </example>
 		/// </summary>
 		ErrorResponse,
-		
+
 		/// <summary>
 		/// The service responded with data that the client deemed invalid.
 		/// <example>The service responded with a plain text string, but the
@@ -38,7 +38,7 @@
 		/// date later than an EndDate field.</example>
 		/// </summary>
 		ClientError,
-		
+
 		/// <summary>
 		/// The client, following the circuit breaker pattern, did not attempt
 		/// to contact the service due to multiple recent timeouts or connection
@@ -46,5 +46,5 @@
 		/// </summary>
 		CircuitOpen
 	}
-	
+
 }
