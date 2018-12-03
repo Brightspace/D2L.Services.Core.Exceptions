@@ -9,6 +9,7 @@
     <Description>An abstract exception class that represents an error that occurred while communicating with a service. Provides a consistent way to catch service related errors.</Description>
     <Company>D2L Corporation</Company>
     <Copyright>Copyright © D2L Corporation 2018</Copyright>
+    <PackageProjectUrl>https://github.com/Brightspace/D2L.Services.Core.Exceptions</PackageProjectUrl>
   </PropertyGroup>
  
 </Project>
