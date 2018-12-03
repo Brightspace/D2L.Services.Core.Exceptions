@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
 
-    <Version>1.0.0</Version>
+    <Version>0.0.0</Version>
     <Title>D2L.Services.Core.Exceptions</Title>
     <Product>D2L.Services.Core.Exceptions</Product>
     <Description>An abstract exception class that represents an error that occurred while communicating with a service. Provides a consistent way to catch service related errors.</Description>
